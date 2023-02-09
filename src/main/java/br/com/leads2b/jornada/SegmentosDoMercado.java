@@ -19,14 +19,14 @@ public class SegmentosDoMercado {
 	public static WebDriver driver;
 	public static String url;
 	
-	
-	
 	public SegmentosDoMercado(WebDriver driver) {
 		SegmentosDoMercado.driver = driver;
 	}
 	
 	public void buscarSegmentosDeMercado(int segmento, int estado, int cidade) throws InterruptedException, IOException{
 		
+		//funcionalidade de scroll para visualizar um elemnto em espqcifico
+		System.out.println("Buscar Segmento do Mercado por localidade");
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath(String.valueOf(e.spanBuscarSegmentoDoMercado))));
 		
@@ -34,12 +34,12 @@ public class SegmentosDoMercado {
 		driver.findElement(By.xpath(String.valueOf(e.inputSegmentosSugeridos))).click();
 		driver.findElement(By.xpath(String.valueOf(e.clickSegmentosSugeridos))).click();
 		
-		WebElement dropdown = driver.findElement(By.xpath(String.valueOf(e.clickSegmentosSugeridos)));
+		WebElement dropdown = driver.findElement(By.xpath(String.valueOf(e.clickSegmentosSugeridos))); //Localizando elementos
 		dropdown.click();
 		List<WebElement> options = dropdown.findElements(By.className("pl2"));
 		jse.executeScript("arguments[0].scrollIntoView(true);",options.get(segmento));
 		Thread.sleep(2000);
-		options.get(segmento).click();
+		options.get(segmento).click(); //segmento é o indice do elemento que quero clicar
 		
 		driver.findElement(By.xpath(String.valueOf(e.inputEstado))).click();
 		driver.findElement(By.xpath(String.valueOf(e.clickEstado))).click();
@@ -55,7 +55,6 @@ public class SegmentosDoMercado {
 		driver.findElement(By.xpath(String.valueOf(e.clickCidade))).click();
 		
 		dropdown = driver.findElement(By.xpath(String.valueOf(e.clickCidade)));
-		System.out.println("drop" +dropdown.getText());
 		dropdown.click();
 		options = dropdown.findElements(By.className("pl2"));
 		jse.executeScript("arguments[0].scrollIntoView(true);",options.get(cidade));

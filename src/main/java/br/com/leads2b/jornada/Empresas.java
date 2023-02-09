@@ -21,29 +21,27 @@ public class Empresas {
 
 	public void selecionarEmpresa() throws InterruptedException, IOException {
 
-		
+		System.out.println("Escolher empresa");
 		driver.findElement(By.xpath(String.valueOf(e.academia))).click();
 		Thread.sleep(3000);
 		Screen.take(driver, DataHoraScreen.dataHoraArquivo() + "Empresa.png");
-
 	}
 
 	public void salvarEmpresa()  throws InterruptedException, IOException{
+		System.out.println("Salvar Empresa");
 		driver.findElement(By.xpath(String.valueOf(e.btSalvarNoFunilDeVendas))).click();
 
 		Thread.sleep(3000);
 		Screen.take(driver, DataHoraScreen.dataHoraArquivo() + "EmpresaSalva.png");
-
 	}
 
 	public void verFunildeVendas()  throws InterruptedException, IOException{
+		System.out.println("Visualizar Funil de Vendas");
 		driver.findElement(By.xpath(String.valueOf(e.btVerNoFunilDeVendas))).click();
 
 		Thread.sleep(3000);
 		Screen.take(driver, DataHoraScreen.dataHoraArquivo() + "Negocios_FunilDeVendas.png");
-		
-		
-
+	
 	}
 
 }

@@ -3,6 +3,7 @@ package br.com.leads2b.auxiliares;
 import java.io.File;
 import java.io.IOException;
 
+//Classe que está configurado como será criado o diretorio para salvar as evidencias
 public class CriaçãoDeDiretorio {
 	
 	public static String nomePasta;

@@ -22,6 +22,7 @@ public class Negocios {
 
 	public void acessarNegociosPeloMenuLateral() throws InterruptedException, IOException {
 
+		System.out.println("Acessando Negocios pelo menu lateral");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath((String.valueOf(e.btNegocios)))).click();
 		Thread.sleep(2000);
@@ -31,6 +32,7 @@ public class Negocios {
 
 	public void mostarFunilDeVendas() throws InterruptedException, IOException {
 
+		System.out.println("Filtar para mostrar Funil de Vendas");
 		driver.findElement(By.xpath((String.valueOf(e.btFiltro)))).click();
 		driver.findElement(By.xpath((String.valueOf(e.optionProspect)))).click();
 
@@ -39,6 +41,7 @@ public class Negocios {
 	}
 
 	public void alterarStatus(String empresa, String novoStatus) throws InterruptedException, IOException {
+		System.out.println("Alterar status da empresa");
 		Thread.sleep(2000); 
 		driver.findElement(By.xpath((String.valueOf(empresa)))).click();
 		Thread.sleep(2000);
@@ -48,9 +51,6 @@ public class Negocios {
 		
 		driver.navigate().back();
 		Screen.take(driver, DataHoraScreen.dataHoraArquivo() + "Tela_Funil_De_Vendas.png");
-		
-		
-
 		
 	}
 

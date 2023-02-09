@@ -30,8 +30,7 @@ public class Login {
 		this.password = password;
 	}
 	public void login( ) throws IOException, InterruptedException {
-		//Login.driver = driver;
-		
+	
 		System.out.println("Fazendo login no sistema Leads2b");
 		driver.manage().window().maximize();
 		driver.get(url);

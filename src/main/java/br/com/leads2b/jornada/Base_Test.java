@@ -12,6 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import br.com.leads2b.auxiliares.CriaçãoDeDiretorio;
 
+// Clase que contém o que será executado antes e depois do testes
 public class Base_Test {
 	
 	protected static WebDriver driver;
@@ -37,8 +38,8 @@ public class Base_Test {
 		System.out.println(getProp());
 	}
 	
-/*	@After
+	@After
 	public void finaliza() {
 		driver.quit();
-	}*/
+	}
 }

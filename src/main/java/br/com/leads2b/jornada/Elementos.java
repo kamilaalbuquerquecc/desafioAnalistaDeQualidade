@@ -1,11 +1,7 @@
 package br.com.leads2b.jornada;
 
+//Clase onde encontra todos os elemntos utilizados na automação
 public class Elementos {
-	
-	//class GeradorCNPJ
-	public String btGerarCnpj = "//*[@id=\"nv-new-generator-cnpj\"]";
-	public String txtCnpj = "//*[@id=\"nv-field-generator-cnpj\"]";
-	public String btCopiar = "/html/body/main/div/div[2]/div/div[4]/div[1]/div[4]/div[1]/div[2]/span";
 	
 	//class Login
 	public String headerLogin = "/html/body/div[1]/div[2]/div[2]/div[1]/header/p";
@@ -14,7 +10,7 @@ public class Elementos {
 	public String btEntrar = "/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div/span/div[2]/form/div[3]/button/div";
 	public String headerHome= "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div/h6";
 	
-	//Segmentos do Mercado
+	//class Segmentos do Mercado
 	public String spanBuscarSegmentoDoMercado = "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[4]/div/div/div[2]/span";
 	public String inputSegmentosSugeridos = "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[4]/div/div/div[2]/div/div[1]/div/div/input";
 	public String clickSegmentosSugeridos ="/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[4]/div/div/div[2]/div/div[1]/div";
@@ -32,7 +28,7 @@ public class Elementos {
 	public String btBuscar = "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[4]/div/div/div[3]/button[1]";
 	public String input= "";
 	
-	//Empresas
+	//class Empresas
 	public String academia = "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div[2]/div/div/div[2]/div/div[2]/div[1]/div[2]/div/div/table/tbody/tr[4]/td[1]/div/div[2]";
 	public String acouguesEpeixarias = "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div[2]/div/div/div[2]/div/div[2]/div[1]/div[2]/div/div/table/tbody/tr[4]/td[1]/div/div[3]";
 	public int idAcademia = 3;
@@ -47,22 +43,18 @@ public class Elementos {
 	public String btVerNegocios= "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div/div/div/div[1]/div/div[2]/div[2]/button";
 	public String nomeEmpresa= "Vita Clinicas Medicina Especializada Ltda";
 	
-	//Negocios
+	//class Negocios
 	public String btNegocios= "/html/body/div[1]/div[2]/div[1]/div[1]/div/div[2]/a[2]";
 	public String headersNegocio= "/html/body/div[2]/div[2]/div[1]/div[2]/div[4]/div/div[1]/h6";
 	public String optionProspect= "/html/body/div[1]/div[2]/div[3]/div/div/div/div[1]";
 	public String btFiltro= "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div[1]/div/div[1]/div/div[1]/button";
-	//public String primeiraEmpresa= "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div[2]/div/div[4]/div[1]/div[2]/div/div[1]";
-								//"/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div[2]/div/div[4]/div[1]/div[2]/div/div[1]"
+
 	public String statusNaoEnriquecido = "/html/body/div[2]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div/div[3]/div[1]/div";
 	public String statusRecontato = "/html/body/div[2]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div/div[3]/div[2]/div";
 	public String statusEnriquecido = "/html/body/div[2]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div/div[3]/div[3]/div";
 	
-	public String empresaNaoEnriquecido= "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div[2]/div/div[4]/div[1]/div[2]/div/div[1]";
-										
-	public String empresaRecontato=    "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div[2]/div/div[4]/div[2]/div[2]/div/div[1]";
-									   
-									  
+	public String empresaNaoEnriquecido= "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div[2]/div/div[4]/div[1]/div[2]/div/div[1]";				
+	public String empresaRecontato=    "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div[2]/div/div[4]/div[2]/div[2]/div/div[1]";								  
 	public String empresaEnriquecido= "/html/body/div[1]/div[2]/div[1]/div[2]/div[5]/div[2]/div/div[1]/div[2]/div/div[4]/div[3]/div[2]/div/div[1]";
 	
 
