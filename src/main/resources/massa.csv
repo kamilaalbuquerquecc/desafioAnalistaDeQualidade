@@ -1,4 +1,12 @@
-testeLogin,email,senha
+testeSalvarEmpresa,email,senha
 ,testes.leads2b@gmail.com, Teste123!
-testeBuscaSegmentoDoMercado,email,senha
+testeSalvarEmpresaEVisualizarFunilDeVendas,email,senha
+,testes.leads2b@gmail.com, Teste123!
+testeVisualizarFunilDeVendasPeloMenuLateral,email,senha
+,testes.leads2b@gmail.com, Teste123!
+testeAlterarStatusDaEmpresaNãoEnriquecidoParaRecontato,email,senha
+,testes.leads2b@gmail.com, Teste123!
+testeAlterarStatusDaEmpresaNãoEnriquecidoParaEnriquecido,email,senha
+,testes.leads2b@gmail.com, Teste123!
+testeAlterarStatusDaEmpresaEnriquecidoParaNãoEnriquecido,email,senha
 ,testes.leads2b@gmail.com, Teste123!

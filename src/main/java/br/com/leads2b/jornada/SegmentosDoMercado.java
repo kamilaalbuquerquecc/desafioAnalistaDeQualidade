@@ -24,14 +24,11 @@ public class SegmentosDoMercado {
 	public SegmentosDoMercado(WebDriver driver) {
 		SegmentosDoMercado.driver = driver;
 	}
-
-
-	public void localizarSegmentosDeMercado() throws InterruptedException, IOException{
-		//SegmentosDoMercado.driver = driver;
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		//jse.executeScript("window.scrollBy(0,125)");
-		jse.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath(String.valueOf(e.spanBuscarSegmentoDoMercado))));
+	
+	public void buscarSegmentosDeMercado(int segmento, int estado, int cidade) throws InterruptedException, IOException{
 		
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath(String.valueOf(e.spanBuscarSegmentoDoMercado))));
 		
 		driver.findElement(By.xpath(String.valueOf(e.inputSegmentosSugeridos))).click();
 		driver.findElement(By.xpath(String.valueOf(e.inputSegmentosSugeridos))).click();
@@ -40,9 +37,9 @@ public class SegmentosDoMercado {
 		WebElement dropdown = driver.findElement(By.xpath(String.valueOf(e.clickSegmentosSugeridos)));
 		dropdown.click();
 		List<WebElement> options = dropdown.findElements(By.className("pl2"));
-		jse.executeScript("arguments[0].scrollIntoView(true);",options.get(2));
+		jse.executeScript("arguments[0].scrollIntoView(true);",options.get(segmento));
 		Thread.sleep(2000);
-		options.get(2).click();
+		options.get(segmento).click();
 		
 		driver.findElement(By.xpath(String.valueOf(e.inputEstado))).click();
 		driver.findElement(By.xpath(String.valueOf(e.clickEstado))).click();
@@ -50,9 +47,9 @@ public class SegmentosDoMercado {
 		dropdown = driver.findElement(By.xpath(String.valueOf(e.clickEstado)));
 		dropdown.click();
 		options = dropdown.findElements(By.className("pl2"));
-		jse.executeScript("arguments[0].scrollIntoView(true);",options.get(25));
+		jse.executeScript("arguments[0].scrollIntoView(true);",options.get(estado));
 		Thread.sleep(2000);
-		options.get(25).click();
+		options.get(estado).click();
 		
 		driver.findElement(By.xpath(String.valueOf(e.inputCidade))).click();
 		driver.findElement(By.xpath(String.valueOf(e.clickCidade))).click();
@@ -61,17 +58,17 @@ public class SegmentosDoMercado {
 		System.out.println("drop" +dropdown.getText());
 		dropdown.click();
 		options = dropdown.findElements(By.className("pl2"));
-		jse.executeScript("arguments[0].scrollIntoView(true);",options.get(565));
+		jse.executeScript("arguments[0].scrollIntoView(true);",options.get(cidade));
 		Thread.sleep(2000);
-		options.get(565).click();
+		options.get(cidade).click();
 		
 		Screen.take(driver,  DataHoraScreen.dataHoraArquivo() + "Busca.png");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(String.valueOf(e.btBuscar))).click();
 		
+		Thread.sleep(4000);
+		Screen.take(driver,  DataHoraScreen.dataHoraArquivo() + "Encontrados.png");
 	}
-	
-	
 	
 	
 }
