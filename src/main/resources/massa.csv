@@ -1,2 +1,4 @@
-testeCadastro,emailAdmin,senhaAdmin,nomeEmpresa,nomeAdministrador,emailAdministrador,celular,cnpj,novaSenha, confirmaSenha
-,gestaosped@gmail.com,gestaospedadmin,Automatizando Teste,Kamila Automatizando,spedautomation.kamila+automatizando_admin4@gmail.com,83995445256,49.763.776/0001-52,Test123!, Test123!
+testeLogin,email,senha
+,testes.leads2b@gmail.com, Teste123!
+testeBuscaSegmentoDoMercado,email,senha
+,testes.leads2b@gmail.com, Teste123!
