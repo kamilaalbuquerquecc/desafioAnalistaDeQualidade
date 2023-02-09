@@ -19,7 +19,7 @@ import br.com.leads2b.jornada.SegmentosDoMercado;
 @RunWith(DataDrivenTestRunner.class)
 @DataLoader(filePaths = "massa.csv")
 
-public class Teste extends Base_Test{
+public class TesteDeAutomaçãoLeads2b extends Base_Test{
 //colocar testes em sequencia
 	
 	//Criar Assertes
